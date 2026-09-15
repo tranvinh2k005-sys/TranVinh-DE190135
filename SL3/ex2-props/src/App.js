@@ -27,7 +27,7 @@ function App() {
     <div className="container">
       <header className="app-header">
         <h1>🍕 Danh Sách Sản Phẩm Pizza</h1>
-        <p className="subtitle">Sử dụng Props & Component Reusability (Slot 3)</p>
+      
       </header>
       <div className="product-grid">
         {pizzaProducts.map((pizza) => (
