@@ -1,0 +1,18 @@
+export const fields = [
+  { id: 'fullName', label: 'Họ và tên', type: 'text', placeholder: 'Nguyễn Văn A', required: true },
+  { id: 'email', label: 'Email', type: 'email', placeholder: 'name@example.com', required: true },
+  { id: 'password', label: 'Mật khẩu', type: 'password', placeholder: 'Ít nhất 8 ký tự', required: true, helpText: 'Dùng cả chữ và số' },
+  { id: 'phone', label: 'Số điện thoại', type: 'tel', placeholder: '09xx xxx xxx' },
+  { id: 'birthday', label: 'Ngày sinh', type: 'date' },
+];
+
+export const genders = ['Nam', 'Nữ', 'Khác'];
+export const majors = ['Software Engineering', 'Artificial Intelligence', 'Digital Marketing'];
+
+// Trường bổ sung phục vụ kiểm tra Bước 8 (mở rộng form mà không cần sửa JSX)
+export const addressField = {
+  id: 'address',
+  label: 'Địa chỉ',
+  type: 'text',
+  placeholder: 'Số nhà, đường, quận/huyện, thành phố...',
+};
