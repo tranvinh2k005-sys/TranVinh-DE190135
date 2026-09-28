@@ -1,0 +1,262 @@
+/* Pizza House custom styles for Lab 2 */
+
+.pizza-app {
+  background-color: #333333;
+  color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: #1f1f1f !important;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.brand-text {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ffffff !important;
+  letter-spacing: 0.5px;
+}
+
+.nav-link-custom {
+  color: #e0e0e0 !important;
+  font-size: 0.95rem;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link-custom:hover {
+  color: #ffc107 !important;
+}
+
+.nav-link-custom.active {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Search input & button */
+.search-form {
+  max-width: 320px;
+}
+
+.search-input {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border: 1px solid #ced4da;
+  font-size: 0.9rem;
+}
+
+.search-btn {
+  background-color: #d92338 !important;
+  border-color: #d92338 !important;
+  color: #ffffff !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  padding: 0.375rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-btn:hover {
+  background-color: #b01b2c !important;
+  border-color: #b01b2c !important;
+}
+
+/* Carousel Hero */
+.hero-carousel {
+  width: 100%;
+}
+
+.hero-carousel .carousel-item {
+  height: 520px;
+  background-color: #111;
+}
+
+.hero-carousel-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.hero-caption {
+  bottom: 3.5rem !important;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+.hero-caption h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.hero-caption p {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #f0f0f0;
+}
+
+/* Section Headings */
+.section-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Pizza Menu Cards */
+.pizza-card {
+  background-color: #ffffff !important;
+  border: none !important;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.pizza-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.pizza-card-img {
+  height: 230px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.pizza-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffeb3b;
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pizza-card-body {
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.pizza-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.price-original {
+  color: #888888;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  text-decoration: line-through;
+}
+
+.price-sale {
+  color: #ff9800;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.price-regular {
+  color: #555555;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.btn-buy {
+  background-color: #343a40 !important;
+  border-color: #343a40 !important;
+  color: #ffffff !important;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  transition: background-color 0.2s;
+}
+
+.btn-buy:hover {
+  background-color: #212529 !important;
+  border-color: #212529 !important;
+}
+
+/* Booking Form Section */
+.booking-section {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.booking-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.booking-form .form-control,
+.booking-form .form-select {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+}
+
+.booking-form .form-control:focus,
+.booking-form .form-select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+.btn-send-message {
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.6rem 1.6rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-send-message:hover {
+  background-color: #e0a800 !important;
+  border-color: #d39e00 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+/* Toast feedback / Alert feedback */
+.custom-alert {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-carousel .carousel-item {
+    height: 320px;
+  }
+  .hero-carousel-img {
+    height: 320px;
+  }
+  .hero-caption h2 {
+    font-size: 1.8rem;
+  }
+  .hero-caption p {
+    font-size: 0.95rem;
+  }
+}
