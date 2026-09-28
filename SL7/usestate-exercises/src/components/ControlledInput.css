@@ -1,0 +1,85 @@
+.controlled-input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.controlled-input-card {
+  background-color: #21252b;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  padding: 36px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  min-width: 320px;
+  max-width: 90%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.controlled-input-card:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.text-input {
+  width: 100%;
+  background-color: #ffffff;
+  color: #111827;
+  border: 1px solid #6b7280;
+  border-radius: 4px;
+  padding: 8px 36px 8px 12px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.text-input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+.clear-btn {
+  position: absolute;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-btn:hover {
+  color: #111827;
+  background-color: #e5e7eb;
+}
+
+.input-display {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #f3f4f6;
+  margin: 0;
+  letter-spacing: -0.5px;
+  word-break: break-word;
+  text-align: center;
+  min-height: 40px;
+}
