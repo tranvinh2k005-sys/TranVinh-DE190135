@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import Counter from './components/Counter';
-import ControlledInput from './components/ControlledInput';
+import Counter from './components/1_Counter';
+import ControlledInput from './components/2_ControlledInput';
+import ToggleVisibility from './components/3_ToggleVisibility';
 import './App.css';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('exercise2');
+  const [activeTab, setActiveTab] = useState('exercise3');
 
   return (
     <div className="app-container">
@@ -20,14 +21,21 @@ function App() {
             className={`tab-btn ${activeTab === 'exercise1' ? 'active' : ''}`}
             onClick={() => setActiveTab('exercise1')}
           >
-            1. Simple Counter
+            1. Counter
           </button>
           <button
             type="button"
             className={`tab-btn ${activeTab === 'exercise2' ? 'active' : ''}`}
             onClick={() => setActiveTab('exercise2')}
           >
-            2. Controlled Input Field
+            2. Controlled Input
+          </button>
+          <button
+            type="button"
+            className={`tab-btn ${activeTab === 'exercise3' ? 'active' : ''}`}
+            onClick={() => setActiveTab('exercise3')}
+          >
+            3. Toggle Visibility
           </button>
           <button
             type="button"
@@ -42,15 +50,22 @@ function App() {
       <main className="app-main">
         {(activeTab === 'exercise1' || activeTab === 'all') && (
           <section className="exercise-section">
-            {activeTab === 'all' && <h3 className="section-title">Exercise 1: Simple Counter</h3>}
+            {activeTab === 'all' && <h3 className="section-title">1. Counter</h3>}
             <Counter />
           </section>
         )}
 
         {(activeTab === 'exercise2' || activeTab === 'all') && (
           <section className="exercise-section">
-            {activeTab === 'all' && <h3 className="section-title">Exercise 2: Controlled Input Field</h3>}
+            {activeTab === 'all' && <h3 className="section-title">2. Controlled Input</h3>}
             <ControlledInput />
+          </section>
+        )}
+
+        {(activeTab === 'exercise3' || activeTab === 'all') && (
+          <section className="exercise-section">
+            {activeTab === 'all' && <h3 className="section-title">3. Toggle Visibility</h3>}
+            <ToggleVisibility />
           </section>
         )}
       </main>

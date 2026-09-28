@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './ControlledInput.css';
+import './2_ControlledInput.css';
 
 function ControlledInput() {
   const [text, setText] = useState('');
