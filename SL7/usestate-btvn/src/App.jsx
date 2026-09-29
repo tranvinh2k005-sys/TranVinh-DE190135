@@ -2,10 +2,11 @@ import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FaqAccordion from './components/1_FaqAccordion';
 import ReviewForm from './components/2_ReviewForm';
+import BmiCalculator from './components/3_BmiCalculator';
 import './App.css';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('bai2');
+  const [activeTab, setActiveTab] = useState('bai3');
 
   return (
     <div className="app-container">
@@ -32,10 +33,17 @@ function App() {
           </button>
           <button
             type="button"
+            className={`tab-btn ${activeTab === 'bai3' ? 'active' : ''}`}
+            onClick={() => setActiveTab('bai3')}
+          >
+            Bài 3: Máy tính BMI
+          </button>
+          <button
+            type="button"
             className={`tab-btn ${activeTab === 'all' ? 'active' : ''}`}
             onClick={() => setActiveTab('all')}
           >
-            Xem cả hai bài
+            Xem tất cả
           </button>
         </nav>
       </header>
@@ -43,6 +51,7 @@ function App() {
       <main className="app-main">
         {(activeTab === 'bai1' || activeTab === 'all') && <FaqAccordion />}
         {(activeTab === 'bai2' || activeTab === 'all') && <ReviewForm />}
+        {(activeTab === 'bai3' || activeTab === 'all') && <BmiCalculator />}
       </main>
 
       <footer className="app-footer">
