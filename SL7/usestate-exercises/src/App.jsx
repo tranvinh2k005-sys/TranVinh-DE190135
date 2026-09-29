@@ -2,10 +2,11 @@ import { useState } from 'react';
 import Counter from './components/1_Counter';
 import ControlledInput from './components/2_ControlledInput';
 import ToggleVisibility from './components/3_ToggleVisibility';
+import TodoList from './components/4_TodoList';
 import './App.css';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('exercise3');
+  const [activeTab, setActiveTab] = useState('exercise4');
 
   return (
     <div className="app-container">
@@ -39,6 +40,13 @@ function App() {
           </button>
           <button
             type="button"
+            className={`tab-btn ${activeTab === 'exercise4' ? 'active' : ''}`}
+            onClick={() => setActiveTab('exercise4')}
+          >
+            4. Todo List
+          </button>
+          <button
+            type="button"
             className={`tab-btn ${activeTab === 'all' ? 'active' : ''}`}
             onClick={() => setActiveTab('all')}
           >
@@ -66,6 +74,13 @@ function App() {
           <section className="exercise-section">
             {activeTab === 'all' && <h3 className="section-title">3. Toggle Visibility</h3>}
             <ToggleVisibility />
+          </section>
+        )}
+
+        {(activeTab === 'exercise4' || activeTab === 'all') && (
+          <section className="exercise-section">
+            {activeTab === 'all' && <h3 className="section-title">4. Todo List</h3>}
+            <TodoList />
           </section>
         )}
       </main>

@@ -72,7 +72,7 @@
 
 .app-main {
   width: 100%;
-  max-width: 650px;
+  max-width: 860px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
