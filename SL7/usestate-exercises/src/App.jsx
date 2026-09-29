@@ -3,10 +3,11 @@ import Counter from './components/1_Counter';
 import ControlledInput from './components/2_ControlledInput';
 import ToggleVisibility from './components/3_ToggleVisibility';
 import TodoList from './components/4_TodoList';
+import ColorSwitcher from './components/5_ColorSwitcher';
 import './App.css';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('exercise4');
+  const [activeTab, setActiveTab] = useState('exercise5');
 
   return (
     <div className="app-container">
@@ -47,6 +48,13 @@ function App() {
           </button>
           <button
             type="button"
+            className={`tab-btn ${activeTab === 'exercise5' ? 'active' : ''}`}
+            onClick={() => setActiveTab('exercise5')}
+          >
+            5. Color Switcher
+          </button>
+          <button
+            type="button"
             className={`tab-btn ${activeTab === 'all' ? 'active' : ''}`}
             onClick={() => setActiveTab('all')}
           >
@@ -81,6 +89,13 @@ function App() {
           <section className="exercise-section">
             {activeTab === 'all' && <h3 className="section-title">4. Todo List</h3>}
             <TodoList />
+          </section>
+        )}
+
+        {(activeTab === 'exercise5' || activeTab === 'all') && (
+          <section className="exercise-section">
+            {activeTab === 'all' && <h3 className="section-title">5. Color Switcher</h3>}
+            <ColorSwitcher />
           </section>
         )}
       </main>
