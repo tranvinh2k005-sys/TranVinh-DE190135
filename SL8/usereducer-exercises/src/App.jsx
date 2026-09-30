@@ -5,13 +5,13 @@ import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Bai1_StepCounter from './components/Bai1_StepCounter';
 import Bai2_OrderTracker from './components/Bai2_OrderTracker';
+import Bai3_KanbanBoard from './components/Bai3_KanbanBoard';
 
 function App() {
-  // Mặc định mở Bài 1 trước
   const [key, setKey] = useState('bai1');
 
   return (
-    <Container className="py-4" style={{ maxWidth: 800 }}>
+    <Container className="py-4" style={{ maxWidth: 860 }}>
       <h2 className="mb-4 text-center fw-bold">Bài tập useReducer - Slot 8</h2>
       <Tabs
         id="exercises-tabs"
@@ -27,6 +27,11 @@ function App() {
         <Tab eventKey="bai2" title="2. Bài 2: OrderTracker">
           <div className="d-flex justify-content-center">
             <Bai2_OrderTracker />
+          </div>
+        </Tab>
+        <Tab eventKey="bai3" title="3. Bài 3: KanbanBoard">
+          <div className="d-flex justify-content-center">
+            <Bai3_KanbanBoard />
           </div>
         </Tab>
       </Tabs>
