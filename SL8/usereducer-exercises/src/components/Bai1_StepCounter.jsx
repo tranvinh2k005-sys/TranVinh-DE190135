@@ -42,14 +42,14 @@ const counterReducer = (state, action) => {
   }
 };
 
-const StepCounter = () => {
+const Bai1_StepCounter = () => {
   const [state, dispatch] = useReducer(counterReducer, initialState);
   const { count, step, history } = state;
 
   return (
     <Card style={{ maxWidth: 420 }}>
       <Card.Body>
-        <Card.Title>Bộ đếm có bước nhảy</Card.Title>
+        <Card.Title className="text-center fw-bold">Bài 1: Bộ đếm có bước nhảy</Card.Title>
         <div className="display-4 text-center my-2">{count}</div>
 
         <div className="d-flex gap-2 justify-content-center mb-3">
@@ -92,4 +92,4 @@ const StepCounter = () => {
   );
 };
 
-export default StepCounter;
+export default Bai1_StepCounter;
