@@ -7,12 +7,13 @@ import Bai1_StepCounter from './components/Bai1_StepCounter';
 import Bai2_OrderTracker from './components/Bai2_OrderTracker';
 import Bai3_KanbanBoard from './components/Bai3_KanbanBoard';
 import Bai4_CourseWizard from './components/Bai4_CourseWizard';
+import Bai5_NotesBoard from './components/Bai5_NotesBoard';
 
 function App() {
   const [key, setKey] = useState('bai1');
 
   return (
-    <Container className="py-4" style={{ maxWidth: 880 }}>
+    <Container className="py-4" style={{ maxWidth: 900 }}>
       <h2 className="mb-4 text-center fw-bold">Bài tập useReducer - Slot 8</h2>
       <Tabs
         id="exercises-tabs"
@@ -38,6 +39,11 @@ function App() {
         <Tab eventKey="bai4" title="4. Bài 4: CourseWizard">
           <div className="d-flex justify-content-center">
             <Bai4_CourseWizard initialCourseId="react" />
+          </div>
+        </Tab>
+        <Tab eventKey="bai5" title="5. Bài 5: NotesBoard">
+          <div className="d-flex justify-content-center">
+            <Bai5_NotesBoard />
           </div>
         </Tab>
       </Tabs>
