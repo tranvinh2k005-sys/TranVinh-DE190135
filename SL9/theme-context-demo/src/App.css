@@ -1,9 +1,66 @@
-/* CSS từ Bước 6 */
+/* ===== Cấu hình chung ===== */
+.app-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ===== Tabs Navigation ===== */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.nav-tabs button {
+  padding: 9px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+  background-color: #f6f8fa;
+  color: #24292f;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-tabs button:hover {
+  background-color: #eaeef2;
+}
+
+.nav-tabs button.active {
+  background-color: #0969da;
+  color: #ffffff;
+  border-color: #0969da;
+  box-shadow: 0 2px 5px rgba(9, 105, 218, 0.3);
+}
+
+.example-content {
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== VÍ DỤ 1 (Theme Context) ===== */
 .box {
   padding: 16px;
-  margin: 8px;
+  margin: 8px 0;
   border-radius: 8px;
   transition: 0.3s;
+  text-align: center;
 }
 
 .light {
@@ -16,50 +73,6 @@
   background: #222;
   color: #f5f5f5;
   border: 1px solid #444;
-}
-
-/* Các style bổ sung cho bố cục demo và chuyển tab VD1 / VD2 */
-.app-container {
-  max-width: 650px;
-  margin: 40px auto;
-  padding: 20px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-.nav-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-
-.nav-tabs button {
-  padding: 10px 18px;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background-color: #f8f9fa;
-  color: #333;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.nav-tabs button:hover {
-  background-color: #e2e6ea;
-}
-
-.nav-tabs button.active {
-  background-color: #007bff;
-  color: #ffffff;
-  border-color: #007bff;
-  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
-}
-
-.vd1-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
 }
 
 .box button {
@@ -77,13 +90,181 @@
 
 .box button:hover {
   opacity: 0.85;
-  transform: translateY(-1px);
 }
 
-.placeholder-vd2 {
-  padding: 30px;
-  border: 2px dashed #bbb;
+/* ===== VÍ DỤ 2 (Giỏ hàng useReducer) ===== */
+.vd2-container {
+  text-align: left;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 16px;
+}
+
+.cart-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.cart-header span {
+  background: #e7f5ff;
+  color: #1971c2;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #a5d8ff;
+}
+
+.product-list-section h3,
+.cart-section h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.product-items,
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.product-item,
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.product-item button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.product-item button:hover {
+  opacity: 0.9;
+}
+
+.cart-item-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.cart-item-actions button {
+  padding: 4px 10px;
+  border: 1px solid #ced4da;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-item-actions button:last-child {
+  background: #ffe3e3;
+  color: #c92a2a;
+  border-color: #ffa8a8;
+}
+
+.cart-total {
+  font-size: 16px;
+  margin: 14px 0;
+  color: #1c7ed6;
+}
+
+.clear-btn {
+  background-color: #fa5252;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.clear-btn:hover {
+  background-color: #e03131;
+}
+
+.empty-cart {
+  color: #868e96;
+  font-style: italic;
+  padding: 10px 0;
+}
+
+/* ===== VÍ DỤ 3 (Auth & ProtectedRoute) ===== */
+.vd3-container {
+  padding: 10px;
+}
+
+.login-box,
+.dashboard-box {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background-color: #0056b3;
+}
+
+.error-text {
+  color: #dc3545;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.dashboard-box {
+  background-color: #f8f9fa;
+  padding: 24px;
   border-radius: 8px;
-  background-color: #fafafa;
-  color: #666;
+  border: 1px solid #e9ecef;
+}
+
+.logout-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.logout-btn:hover {
+  background-color: #5a6268;
 }
