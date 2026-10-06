@@ -11,12 +11,13 @@ import Bai6 from './components/Bai6';
 import Bai7 from './components/Bai7';
 import Bai8 from './components/Bai8';
 import Bai9 from './components/Bai9';
+import Bai10 from './components/Bai10';
 
 function App() {
-  const [key, setKey] = useState('bai9');
+  const [key, setKey] = useState('bai10');
 
   return (
-    <Container className="py-4" style={{ maxWidth: 1100 }}>
+    <Container className="py-4" style={{ maxWidth: 1140 }}>
       <h2 className="mb-4 text-center fw-bold">Bài tập React Hooks - Slot 9 (Lab 4)</h2>
       <Tabs
         id="exercises-tabs"
@@ -50,6 +51,9 @@ function App() {
         </Tab>
         <Tab eventKey="bai9" title="9. Bài 9: useContext Theme & Auth">
           <Bai9 />
+        </Tab>
+        <Tab eventKey="bai10" title="10. Bài 10: Cửa hàng mini">
+          <Bai10 />
         </Tab>
       </Tabs>
     </Container>
