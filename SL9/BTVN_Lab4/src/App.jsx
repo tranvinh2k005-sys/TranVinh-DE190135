@@ -5,9 +5,10 @@ import Tab from 'react-bootstrap/Tab';
 import Bai1 from './components/Bai1';
 import Bai2 from './components/Bai2';
 import Bai3 from './components/Bai3';
+import Bai4 from './components/Bai4';
 
 function App() {
-  const [key, setKey] = useState('bai3');
+  const [key, setKey] = useState('bai4');
 
   return (
     <Container className="py-4" style={{ maxWidth: 1100 }}>
@@ -26,6 +27,9 @@ function App() {
         </Tab>
         <Tab eventKey="bai3" title="3. Bài 3: ProductFilter">
           <Bai3 />
+        </Tab>
+        <Tab eventKey="bai4" title="4. Bài 4: RegisterForm">
+          <Bai4 />
         </Tab>
       </Tabs>
     </Container>
