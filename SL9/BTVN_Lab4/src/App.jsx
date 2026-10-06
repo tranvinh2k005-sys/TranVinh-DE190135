@@ -7,9 +7,10 @@ import Bai2 from './components/Bai2';
 import Bai3 from './components/Bai3';
 import Bai4 from './components/Bai4';
 import Bai5 from './components/Bai5';
+import Bai6 from './components/Bai6';
 
 function App() {
-  const [key, setKey] = useState('bai5');
+  const [key, setKey] = useState('bai6');
 
   return (
     <Container className="py-4" style={{ maxWidth: 1100 }}>
@@ -34,6 +35,9 @@ function App() {
         </Tab>
         <Tab eventKey="bai5" title="5. Bài 5: ValidatedRegisterForm">
           <Bai5 />
+        </Tab>
+        <Tab eventKey="bai6" title="6. Bài 6: TodoList">
+          <Bai6 />
         </Tab>
       </Tabs>
     </Container>
