@@ -8,10 +8,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { loginReducer, initialLoginState, validateLogin } from '../reducers/loginReducer';
 
-export const DEMO_ACCOUNT = { email: 'admin@fpt.edu.vn', password: '12345678' };
+const DEMO_ACCOUNT = { email: 'admin@fpt.edu.vn', password: '12345678' };
 
 // Giả lập gọi API mất 1 giây
-export const fakeLoginApi = ({ email, password }) =>
+const fakeLoginApi = ({ email, password }) =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
       if (email === DEMO_ACCOUNT.email && password === DEMO_ACCOUNT.password) resolve(email);

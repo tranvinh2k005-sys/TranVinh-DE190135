@@ -10,9 +10,10 @@ import Bai5 from './components/Bai5';
 import Bai6 from './components/Bai6';
 import Bai7 from './components/Bai7';
 import Bai8 from './components/Bai8';
+import Bai9 from './components/Bai9';
 
 function App() {
-  const [key, setKey] = useState('bai8');
+  const [key, setKey] = useState('bai9');
 
   return (
     <Container className="py-4" style={{ maxWidth: 1100 }}>
@@ -46,6 +47,9 @@ function App() {
         </Tab>
         <Tab eventKey="bai8" title="8. Bài 8: useReducer Login">
           <Bai8 />
+        </Tab>
+        <Tab eventKey="bai9" title="9. Bài 9: useContext Theme & Auth">
+          <Bai9 />
         </Tab>
       </Tabs>
     </Container>
