@@ -4,12 +4,13 @@ import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Bai1 from './components/Bai1';
 import Bai2 from './components/Bai2';
+import Bai3 from './components/Bai3';
 
 function App() {
-  const [key, setKey] = useState('bai2');
+  const [key, setKey] = useState('bai3');
 
   return (
-    <Container className="py-4" style={{ maxWidth: 900 }}>
+    <Container className="py-4" style={{ maxWidth: 1100 }}>
       <h2 className="mb-4 text-center fw-bold">Bài tập React Hooks - Slot 9 (Lab 4)</h2>
       <Tabs
         id="exercises-tabs"
@@ -22,6 +23,9 @@ function App() {
         </Tab>
         <Tab eventKey="bai2" title="2. Bài 2: ProfilePreview">
           <Bai2 />
+        </Tab>
+        <Tab eventKey="bai3" title="3. Bài 3: ProductFilter">
+          <Bai3 />
         </Tab>
       </Tabs>
     </Container>
