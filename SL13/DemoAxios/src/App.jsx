@@ -6,24 +6,25 @@ import CreatePost from './components/CreatePost';
 import UpdatePost from './components/UpdatePost';
 import PatchPost from './components/PatchPost';
 import DeletePost from './components/DeletePost';
+import RequestConfig from './components/RequestConfig';
 
 function App() {
   return (
-    <React.StrictMode>
-      <div className="container mt-4">
-        <AxiosDemo />
-        <hr />
-        <PostList />
-        <hr />
-        <CreatePost />
-        <hr />
-        <UpdatePost />
-        <hr />
-        <PatchPost />
-        <hr />
-        <DeletePost />
-      </div>
-    </React.StrictMode>
+    <div className="container mt-4">
+      <AxiosDemo />
+      <hr />
+      <PostList />
+      <hr />
+      <CreatePost />
+      <hr />
+      <UpdatePost />
+      <hr />
+      <PatchPost />
+      <hr />
+      <DeletePost />
+      <hr />
+      <RequestConfig />
+    </div>
   );
 }
 
